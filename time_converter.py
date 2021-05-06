@@ -1,6 +1,6 @@
 class ConvertTime:
     def __init__(self, clean: bool = False):
-        """IF CLEAN = TRUE, THEN ConvertTime.format() WONT SHOW ITEMS WITH 0"""
+        """IF CLEAN = TRUE, THEN ConvertTime.format() WONT SHOW TIMES THAT ARE 0"""
         self.convertedTime = {"days": 0, "hours": 0, "minutes": 0, "seconds": 0}
         self.clean = clean
 
