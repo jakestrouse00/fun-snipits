@@ -18,15 +18,15 @@ class DotJsonLower:
                     setattr(self, item, dict_input[item])
                 else:
                     setattr(self, item, DotJsonLower(dict_input[item]))
-            
 
     def __repr__(self):
         combine = map(self.map_items, self.__dict__.keys())
-        return f"<{self.__class__.__name__}: "+", ".join(list(combine))+">"
-    
+        return f"<{self.__class__.__name__}: " + ", ".join(list(combine)) + ">"
+
     def map_items(self, item):
         # using map() since it is faster than a for loop
         return f"{item}={self.__dict__[item]}"
+
 
 class DotJson:
     def __init__(self, dict_input: dict = None):
@@ -36,10 +36,10 @@ class DotJson:
                     setattr(self, item, dict_input[item])
                 else:
                     setattr(self, item, DotJsonLower(dict_input[item]))
-    
+
     def __repr__(self):
         combine = map(self.map_items, self.__dict__.keys())
-        return f"<{self.__class__.__name__}: "+", ".join(list(combine))+">"
+        return f"<{self.__class__.__name__}: " + ", ".join(list(combine)) + ">"
 
     def map_items(self, item):
         # using map() since it is faster than a for loop
